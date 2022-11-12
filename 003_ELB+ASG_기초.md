@@ -21,6 +21,11 @@
 ELB (Elastic Load Balancer)
 - 순서대로 CLB, ALB, NLB, GLB 가 있음
 - CLB : TCP (Layer 4), HTTP & HTTPS (Layer 7)
-- ALB : 
+- ALB : HTTP 전용 로드 밸런서
+  - HTTP에서 HTTPS로 트래픽을 자동 리다이렉트하려는 경우 로드 밸런서 레벨에서 가능
+  - path, hostname, query string 으로도 분기 가능하기에 MSA 에 적합함
+  - 타겟그룹으로 EC2 instances, ECS tasks, Lambda functions, 외부 사설 IP 등에서 사용 가능
+  - 고정된 hostname 을 사용하고, X-Forwarded-For / Port / Proto 를 사용해서 클라이언트의 정보를 얻는다.
+
 - NLB : 
 - GLB : 
