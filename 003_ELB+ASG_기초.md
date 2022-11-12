@@ -18,7 +18,7 @@
   - 다운스트림 : Server to Local
   - 말이 어렵지만 아무튼 연결된 여러 인스턴스 혹은 서버로 분산시켜 처리하는 것
 
-ELB (Elastic Loadbalancer)
+ELB (Elastic Load Balancer)
 - 순서대로 CLB, ALB, NLB, GLB 가 있음
 - CLB : TCP (Layer 4), HTTP & HTTPS (Layer 7)
 - ALB : 
